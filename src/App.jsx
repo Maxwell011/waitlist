@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ArrowRight, CheckCircle, AlertCircle } from "lucide-react";
 
-// Images Component
+// Images Component - Mobile Optimized
 function Images() {
   const images = [
     { src: "/image1.jpg", alt: "Image 1" },
@@ -11,13 +11,13 @@ function Images() {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center gap-3 md:gap-4 p-4">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 p-4 max-w-6xl mx-auto">
       {images.map((image, index) => (
         <img
           key={index}
           src={image.src}
           alt={image.alt}
-          className="w-40 sm:w-44 md:w-48 h-48 md:h-52 object-cover rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+          className="w-full aspect-square object-cover rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
         />
       ))}
     </div>
